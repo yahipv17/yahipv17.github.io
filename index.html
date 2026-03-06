@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard PMMM | Gestión Escolar</title>
+    <title>Dashboard PMMM | 7 Fases Administrativas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
@@ -53,52 +53,95 @@
             background: #94a3b8;
         }
 
-        .border-azul {
+        .content-panel {
+            animation: fadeIn 0.25s ease-out forwards;
+        }
+
+        /* Custom Border Colors for the 7 dimensions */
+        .border-dim1 {
             border-top-color: #2563EB;
         }
 
-        .border-verde {
+        /* blue */
+        .border-dim2 {
             border-top-color: #059669;
         }
 
-        .border-naranja {
+        /* emerald */
+        .border-dim3 {
+            border-top-color: #4F46E5;
+        }
+
+        /* indigo */
+        .border-dim4 {
+            border-top-color: #D97706;
+        }
+
+        /* amber */
+        .border-dim5 {
             border-top-color: #EA580C;
         }
 
-        .border-gris {
-            border-top-color: #475569;
+        /* orange */
+        .border-dim6 {
+            border-top-color: #DC2626;
         }
 
-        .sidebar-item.active-azul {
+        /* red */
+        .border-dim7 {
+            border-top-color: #7C3AED;
+        }
+
+        /* violet */
+
+        /* Active sidebar items for the 7 dimensions */
+        .sidebar-item.active-dim1 {
             background: #EFF6FF;
             color: #1D4ED8;
             font-weight: 600;
             border: 1px solid #BFDBFE;
         }
 
-        .sidebar-item.active-verde {
+        .sidebar-item.active-dim2 {
             background: #ECFDF5;
             color: #065F46;
             font-weight: 600;
             border: 1px solid #A7F3D0;
         }
 
-        .sidebar-item.active-naranja {
+        .sidebar-item.active-dim3 {
+            background: #EEF2FF;
+            color: #4338CA;
+            font-weight: 600;
+            border: 1px solid #C7D2FE;
+        }
+
+        .sidebar-item.active-dim4 {
+            background: #FFFBEB;
+            color: #B45309;
+            font-weight: 600;
+            border: 1px solid #FDE68A;
+        }
+
+        .sidebar-item.active-dim5 {
             background: #FFF7ED;
             color: #C2410C;
             font-weight: 600;
             border: 1px solid #FED7AA;
         }
 
-        .sidebar-item.active-gris {
-            background: #F1F5F9;
-            color: #1E293B;
+        .sidebar-item.active-dim6 {
+            background: #FEF2F2;
+            color: #B91C1C;
             font-weight: 600;
-            border: 1px solid #CBD5E1;
+            border: 1px solid #FECACA;
         }
 
-        .content-panel {
-            animation: fadeIn 0.25s ease-out forwards;
+        .sidebar-item.active-dim7 {
+            background: #F5F3FF;
+            color: #6D28D9;
+            font-weight: 600;
+            border: 1px solid #DDD6FE;
         }
     </style>
 </head>
@@ -132,69 +175,127 @@
 
     <!-- Header -->
     <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 fade-in" style="animation-delay: 0.1s;">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Portafolio de Formatos</h2>
-        <p class="text-slate-600 mt-2 text-lg">Gestión Documental Estratégica · Selecciona una dimensión para consultar
-            y abrir los formatos.</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Portafolio Administrativo</h2>
+        <p class="text-slate-600 mt-2 text-lg">Documentos organizados bajo las 7 fases del proceso administrativo
+            escolar.</p>
     </header>
 
-    <!-- Cards -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <button onclick="openModal('azul')"
-            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-azul hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
-            style="animation-delay:0.2s;">
+    <!-- Cards Grid -->
+    <main
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- 1. Planificación -->
+        <button onclick="openModal('dim1')"
+            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-dim1 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
+            style="animation-delay:0.15s;">
             <div
                 class="bg-blue-50 text-blue-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                <i class="ph-fill ph-users-three text-3xl"></i></div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Administrativa</h3>
-            <p class="text-sm text-slate-500 mb-6 flex-grow">Gestión de matrícula, ingresos, constancias y control de
-                estudiantes.</p>
+                <i class="ph-fill ph-map-trifold text-3xl"></i></div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">1. Planificación</h3>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">PEIC, Plan de Acción y Normas de Convivencia
+                institucionales.</p>
             <div class="flex items-center justify-between w-full pt-4 border-t border-slate-100">
-                <span class="text-xs font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded">6 Documentos</span>
+                <span class="text-xs font-bold bg-blue-50 text-blue-700 px-2 py-1 rounded">3 Documentos</span>
                 <i class="ph ph-arrow-right text-blue-600 group-hover:translate-x-1 transition-transform"></i>
             </div>
         </button>
-        <button onclick="openModal('verde')"
-            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-verde hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
-            style="animation-delay:0.3s;">
+
+        <!-- 2. Organización -->
+        <button onclick="openModal('dim2')"
+            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-dim2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
+            style="animation-delay:0.2s;">
             <div
                 class="bg-emerald-50 text-emerald-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                <i class="ph-fill ph-books text-3xl"></i></div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Pedagógica</h3>
-            <p class="text-sm text-slate-500 mb-6 flex-grow">PEIC, asignación de funciones, planes de acción y
-                evaluación docente.</p>
+                <i class="ph-fill ph-tree-structure text-3xl"></i></div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">2. Organización</h3>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Consejo Educativo, asignación de roles, MBFAI y Brigadas.
+            </p>
             <div class="flex items-center justify-between w-full pt-4 border-t border-slate-100">
-                <span class="text-xs font-bold bg-emerald-50 text-emerald-700 px-2 py-1 rounded">6 Documentos</span>
+                <span class="text-xs font-bold bg-emerald-50 text-emerald-700 px-2 py-1 rounded">5 Documentos</span>
                 <i class="ph ph-arrow-right text-emerald-600 group-hover:translate-x-1 transition-transform"></i>
             </div>
         </button>
-        <button onclick="openModal('naranja')"
-            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-naranja hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
-            style="animation-delay:0.4s;">
+
+        <!-- 3. Dirección -->
+        <button onclick="openModal('dim3')"
+            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-dim3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
+            style="animation-delay:0.25s;">
+            <div
+                class="bg-indigo-50 text-indigo-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                <i class="ph-fill ph-compass text-3xl"></i></div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">3. Dirección</h3>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Gestión de ingresos, fichas de inscripción y actas de
+                compromiso.</p>
+            <div class="flex items-center justify-between w-full pt-4 border-t border-slate-100">
+                <span class="text-xs font-bold bg-indigo-50 text-indigo-700 px-2 py-1 rounded">3 Documentos</span>
+                <i class="ph ph-arrow-right text-indigo-600 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+        </button>
+
+        <!-- 4. Control -->
+        <button onclick="openModal('dim4')"
+            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-dim4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
+            style="animation-delay:0.3s;">
+            <div
+                class="bg-amber-50 text-amber-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                <i class="ph-fill ph-faders text-3xl"></i></div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">4. Control</h3>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Asistencias diarias, control de personal y estadísticas de
+                matrícula.</p>
+            <div class="flex items-center justify-between w-full pt-4 border-t border-slate-100">
+                <span class="text-xs font-bold bg-amber-50 text-amber-700 px-2 py-1 rounded">5 Documentos</span>
+                <i class="ph ph-arrow-right text-amber-600 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+        </button>
+
+        <!-- 5. Ejecución -->
+        <button onclick="openModal('dim5')"
+            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-dim5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
+            style="animation-delay:0.35s;">
             <div
                 class="bg-orange-50 text-orange-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                <i class="ph-fill ph-house-line text-3xl"></i></div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Comunitaria</h3>
-            <p class="text-sm text-slate-500 mb-6 flex-grow">Consejo Educativo, actas de asamblea, vocerías MBFAI y
-                familias.</p>
+                <i class="ph-fill ph-paper-plane-tilt text-3xl"></i></div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">5. Ejecución</h3>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Transacciones y certificaciones operativas del día a día
+                (ej. Constancias).</p>
             <div class="flex items-center justify-between w-full pt-4 border-t border-slate-100">
-                <span class="text-xs font-bold bg-orange-50 text-orange-700 px-2 py-1 rounded">4 Documentos</span>
+                <span class="text-xs font-bold bg-orange-50 text-orange-700 px-2 py-1 rounded">1 Documento</span>
                 <i class="ph ph-arrow-right text-orange-600 group-hover:translate-x-1 transition-transform"></i>
             </div>
         </button>
-        <button onclick="openModal('gris')"
-            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-gris hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
-            style="animation-delay:0.5s;">
+
+        <!-- 6. Supervisión -->
+        <button onclick="openModal('dim6')"
+            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-dim6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
+            style="animation-delay:0.4s;">
             <div
-                class="bg-slate-100 text-slate-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-slate-700 group-hover:text-white transition-colors">
-                <i class="ph-fill ph-shield-check text-3xl"></i></div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Operativa</h3>
-            <p class="text-sm text-slate-500 mb-6 flex-grow">Acuerdos de convivencia, conformación de brigadas y
-                seguridad.</p>
+                class="bg-red-50 text-red-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                <i class="ph-fill ph-eye text-3xl"></i></div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">6. Supervisión</h3>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Actas de Asambleas, seguimientos y amonestaciones
+                disciplinarias.</p>
             <div class="flex items-center justify-between w-full pt-4 border-t border-slate-100">
-                <span class="text-xs font-bold bg-slate-100 text-slate-700 px-2 py-1 rounded">3 Documentos</span>
-                <i class="ph ph-arrow-right text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+                <span class="text-xs font-bold bg-red-50 text-red-700 px-2 py-1 rounded">2 Documentos</span>
+                <i class="ph ph-arrow-right text-red-600 group-hover:translate-x-1 transition-transform"></i>
             </div>
         </button>
+
+        <!-- 7. Evaluación -->
+        <button onclick="openModal('dim7')"
+            class="fade-in bg-white rounded-2xl p-6 shadow-sm border-t-4 border-dim7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-left group flex flex-col h-full"
+            style="animation-delay:0.45s;">
+            <div
+                class="bg-violet-50 text-violet-600 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                <i class="ph-fill ph-chart-line-up text-3xl"></i></div>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">7. Evaluación</h3>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Instrumentos para medir el desempeño y cumplimiento de
+                objetivos (ODI).</p>
+            <div class="flex items-center justify-between w-full pt-4 border-t border-slate-100">
+                <span class="text-xs font-bold bg-violet-50 text-violet-700 px-2 py-1 rounded">1 Documento</span>
+                <i class="ph ph-arrow-right text-violet-600 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+        </button>
+
     </main>
 
     <!-- ============ MODAL TEMPLATE ============ -->
@@ -218,7 +319,7 @@
             <div class="flex-1 overflow-hidden flex flex-col md:flex-row bg-slate-50">
                 <!-- Sidebar -->
                 <div class="w-full md:w-80 bg-white border-r border-slate-200 p-4 overflow-y-auto shrink-0">
-                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 px-2">Índice de Formatos
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 px-2">Formatos de la Fase
                     </h4>
                     <ul id="modal-sidebar" class="space-y-1"></ul>
                 </div>
@@ -230,241 +331,274 @@
 
     <script>
         // =========================================================
-        // DATA: All documents per dimension
+        // DATA: 7 Dimensions Mapping
         // =========================================================
         const DIMS = {
-            azul: {
-                title: 'Dimensión Administrativa y Estudiantil',
-                subtitle: 'Gestión de Matrícula · PMMM',
-                icon: 'ph-fill ph-users-three',
+            dim1: {
+                title: 'Fase de Planificación',
+                subtitle: 'Estrategias y metas · PMMM',
+                icon: 'ph-fill ph-map-trifold',
                 color: 'bg-blue-600',
-                activeClass: 'active-azul',
+                activeClass: 'active-dim1',
                 btnColor: 'bg-blue-600 hover:bg-blue-700',
                 badgeColor: 'bg-blue-100 text-blue-800',
                 docs: [
                     {
-                        code: '1.1', icon: 'ph-fill ph-identification-card',
-                        title: 'Ficha de Inscripción Año Escolar',
-                        file: 'Ficha_inscripcion.pdf',
-                        objective: 'Establece la base legal, médica y administrativa del ingreso del estudiante. Sirve como documento probatorio de identidad, resguardo de información de emergencia y registro de los representantes.',
-                        freq: 'Anual (al ingreso del alumno)',
-                        resp: 'Dirección / Control de Estudios',
-                        critical: ['Datos completos del niño/a y de ambos padres.', '<b>Vital:</b> Antecedentes de salud (alergias, grupo sanguíneo, enfermedades crónicas).', 'Persona autorizada para retirar al niño/a con su cédula.'],
-                        alert: 'amber'
-                    },
-                    {
-                        code: '1.2', icon: 'ph-fill ph-handshake',
-                        title: 'Acta de Compromiso del Representante',
-                        file: 'Acta_compromiso.pdf',
-                        objective: 'Formaliza la aceptación del representante de las normas de convivencia, horarios y deberes del plantel, con respaldo legal en la LOE y la LOPNNA.',
-                        freq: 'Anual (al inicio del año escolar)',
-                        resp: 'Docente de Aula / Dirección',
-                        critical: ['Firma y cédula del representante.', 'Fecha de suscripción del acta.', 'Copia archivada en el expediente del alumno.'],
-                        alert: 'amber'
-                    },
-                    {
-                        code: '1.3', icon: 'ph-fill ph-envelope-open',
-                        title: 'Carta de Aceptación',
-                        file: 'carta_aceptacion.pdf',
-                        objective: 'Constancia formal emitida por la dirección del plantel que certifica el ingreso oficial del alumno/a a la institución para el año escolar en curso.',
-                        freq: 'Anual (al momento de la inscripción)',
-                        resp: 'Dirección del Plantel',
-                        critical: ['Sello y firma de la directora.', 'Código DEA de la institución.', 'Nombre y cédula escolar del estudiante.'],
+                        code: 'PLA.1', icon: 'ph-fill ph-book-open',
+                        title: 'Proyecto Educativo Integral Comunitario (PEIC)',
+                        file: '1_Planificacion/peic J .I. Gabriel Picón Gonzalez 2021-2022.doc',
+                        objective: 'Documento rector que traza la meta estratégica: "Acciones de promoción de la educación humanista".',
+                        freq: 'Revisión y actualización anual',
+                        resp: 'Dirección y Comunidad Educativa',
+                        critical: ['Alineado a las políticas del MPPE.', 'Registrado formalmente ante el circuito educativo.'],
                         alert: 'slate'
                     },
                     {
-                        code: '1.4', icon: 'ph-fill ph-certificate',
-                        title: 'Constancia de Estudio',
-                        file: 'Constancia_estudio.pdf',
-                        objective: 'Documento probatorio de la condición de estudiante activo/a en la institución. Requerido para trámites ante organismos del estado, INAM, IVSS, entre otros.',
-                        freq: 'A solicitud del representante',
-                        resp: 'Secretaría / Dirección',
-                        critical: ['Datos actualizados del estudiante (grado, sección).', 'Sello húmedo de la institución.', 'Firma de la directora encargada.'],
+                        code: 'PLA.2', icon: 'ph-fill ph-list-checks',
+                        title: 'Plan de Acción del PEIC',
+                        file: '1_Planificacion/PLAN DE ACCIÒN PEIC DEL PREESCOLAR MANUEL MUJICA MILLAN 2025.docx',
+                        objective: 'Metas operativas derivadas del PEIC, con tiempos y responsables asignados para 2025-2026.',
+                        freq: 'Anual, con evaluación por lapsos',
+                        resp: 'Dirección, Comités y Brigadas',
+                        critical: ['Actividades con fechas claras.', 'Identificación del responsable de cada meta.'],
                         alert: 'slate'
                     },
                     {
-                        code: '1.5', icon: 'ph-fill ph-calendar-check',
-                        title: 'Control de Asistencia Diaria (Secciones A–F)',
-                        file: 'control_asistencia.pdf',
-                        objective: 'Registro diario de la asistencia de los niños y niñas por sección (A, B, C, D, E y F), utilizado para estadísticas mensuales exigidas por el circuito educativo.',
-                        freq: 'Diaria (lunes a viernes)',
-                        resp: 'Docente de Aula por Sección',
-                        critical: ['Una planilla por sección y turno.', 'Justificativo de inasistencias mayor a 3 días.', 'Resumen mensual consolidado para la dirección.'],
-                        alert: 'amber'
-                    },
-                    {
-                        code: '1.6', icon: 'ph-fill ph-chart-bar',
-                        title: 'Formato de Resumen Final (Matrícula Final)',
-                        file: 'FORMATO DE RESUMEN FINAL.doc',
-                        objective: 'Estadística de cierre del año escolar que consolida la matrícula final por sección, sexo y edad, para ser remitida al Circuito 06 y la Zona Educativa de Mérida.',
-                        freq: 'Anual (cierre de año escolar)',
-                        resp: 'Dirección / Control de Estudios',
-                        critical: ['Datos de matrícula separados por sexo (V/H).', 'Totales por sección y gran total institucional.', 'Firma de la directora y sello institucional.'],
-                        alert: 'amber'
+                        code: 'PLA.3', icon: 'ph-fill ph-handshake',
+                        title: 'Acta de Actualización de Acuerdos de Convivencia',
+                        file: '1_Planificacion/2025- 2026 ACTA ACTUALIZACION DE LOS ACUERDOS DE CONV. ESC..doc',
+                        objective: 'Establecimiento del marco normativo interno escolar para garantizar el buen trato infantil y prevención del acoso.',
+                        freq: 'Anual (obligatorio)',
+                        resp: 'Defensoría Escolar y Comunidad',
+                        critical: ['Firma de actores de la triada educativa.', 'Acorde a LOPNNA, circular 0003.', 'Debe ser construido colectivamente.'],
+                        alert: 'red'
                     }
                 ]
             },
-            verde: {
-                title: 'Dimensión Pedagógica y Docente',
-                subtitle: 'Gestión del Aprendizaje y Personal · PMMM',
-                icon: 'ph-fill ph-books',
+            dim2: {
+                title: 'Fase de Organización',
+                subtitle: 'Estructuración y roles · PMMM',
+                icon: 'ph-fill ph-tree-structure',
                 color: 'bg-emerald-600',
-                activeClass: 'active-verde',
+                activeClass: 'active-dim2',
                 btnColor: 'bg-emerald-600 hover:bg-emerald-700',
                 badgeColor: 'bg-emerald-100 text-emerald-800',
                 docs: [
                     {
-                        code: '2.1', icon: 'ph-fill ph-book-open',
-                        title: 'Proyecto Educativo Integral Comunitario (PEIC)',
-                        file: 'peic J .I. Gabriel Picón Gonzalez 2021-2022.doc',
-                        objective: 'Documento rector de la institución. Desarrolla el diagnóstico comunitario e institucional, la misión, visión y el plan estratégico. Título: "Acciones de promoción de la educación humanista con valores ciudadanos y sensibilidad ambiental".',
-                        freq: 'Actualización anual',
-                        resp: 'Dirección + Comunidad Educativa',
-                        critical: ['Diagnóstico participativo actualizado.', 'Objetivos alineados al Plan Nacional Simón Bolívar.', 'Debe ser aprobado en Asamblea Escolar y registrado en el circuito.'],
-                        alert: 'amber'
+                        code: 'ORG.1', icon: 'ph-fill ph-users-four',
+                        title: 'Acta Constitutiva del Consejo Educativo',
+                        file: '2_Organizacion/CONSEJO EDUCATIVO 2025-2026.docx',
+                        objective: 'Documenta la conformación de todos los comités del plantel, según resolución ministerial 058.',
+                        freq: 'Anual',
+                        resp: 'Asamblea y Dirección',
+                        critical: ['Absolutamente libre de tachaduras.', 'Requiere registro en la taquilla única del circuito.', 'Cédulas y nombres correctos de los 118 voceros.'],
+                        alert: 'red'
                     },
                     {
-                        code: '2.2', icon: 'ph-fill ph-list-checks',
-                        title: 'Plan de Acción del PEIC 2025-2026',
-                        file: 'PLAN DE ACCIÒN PEIC DEL PREESCOLAR MANUEL MUJICA MILLAN 2025.docx',
-                        objective: 'Operativiza el PEIC con metas concretas, actividades, responsables y tiempos de ejecución. Incluye metas de infraestructura, seguridad vial, dotación de mobiliario y parques recreativos.',
-                        freq: 'Período escolar 2025-2026',
-                        resp: 'Comités del Consejo Educativo',
-                        critical: ['Metas SMART con cronograma.', 'Identificación de responsables por meta.', 'Seguimiento trimestral obligatorio en asamblea.'],
+                        code: 'ORG.2', icon: 'ph-fill ph-megaphone',
+                        title: 'Elección de Vocería MBFAI',
+                        file: '2_Organizacion/Actas de eleccion de MBFAI (intitucional) (1).2025-2026.docx',
+                        objective: 'Acta que conforma el Movimiento Bolivariano de Familias para asegurar la participación social.',
+                        freq: 'Inicio del Año Escolar',
+                        resp: 'Docentes y Madres/Padres',
+                        critical: ['Respaldo de actas de asistencia.', 'Lista clara de voceros.', 'Registro fotográfico sugerido.'],
                         alert: 'slate'
                     },
                     {
-                        code: '2.3', icon: 'ph-fill ph-user-gear',
-                        title: 'Asignación de Funciones Pedagógicas y Técnicas',
-                        file: 'asignación de funciones yusbely 2024.docx',
-                        objective: 'Acto administrativo emitido por la dirección que asigna formalmente funciones específicas al personal docente: Coordinación de Formación Docente, Vocería de Cultura, CLIFPMV y CRA.',
-                        freq: 'Cuando se requiere (inicio de año o cambio de funciones)',
-                        resp: 'Directora Encargada',
-                        critical: ['Basamento legal: Art. 43 de la LOE.', 'Período de vigencia definido.', 'Firma de la directora y del docente designado.'],
-                        alert: 'amber'
+                        code: 'ORG.3', icon: 'ph-fill ph-shield-plus',
+                        title: 'Estructura de Brigadas Escolares',
+                        file: '2_Organizacion/BRIGADAS AÑO ESCOLAR 2024-2025 (9).xls PMMM.xls',
+                        objective: 'Sistematiza quiénes son responsables de liderar las distintas brigadas de prevención (Lectura, Salud, Deporte).',
+                        freq: 'Anual',
+                        resp: 'Coordinación Integrada',
+                        critical: ['Cada brigada debe unir un directivo, docente, padre y obrero.', 'Nombres completos y turnos.'],
+                        alert: 'amber',
+                        extras: ['Lectura, Ciencia y Tecnología, Deporte, Salud, Ecológica, Bricomiles']
                     },
                     {
-                        code: '2.4', icon: 'ph-fill ph-clock',
-                        title: 'Control de Asistencia de Personal',
-                        file: 'constancia_asistencia.pdf',
-                        objective: 'Registro legal de la entrada y salida diaria del personal Directivo, Docente, Administrativo y Obrero (turnos mañana y tarde), para respaldar pagos, evaluaciones e incidencias laborales.',
-                        freq: 'Diaria (lunes a viernes)',
-                        resp: 'Subdirección Administrativa / Dirección',
-                        critical: ['Separación por categorías: Directivo, Docente, Administrativo, Obrero.', 'Columnas: Cédula, Nombre, Hora entrada/salida, Firma.', 'Observaciones de retardos o permisos.'],
-                        alert: 'amber'
+                        code: 'ORG.4', icon: 'ph-fill ph-users-three',
+                        title: 'Listados y Nóminas de las Brigadas',
+                        file: '2_Organizacion/BRIGADAS AÑO ESCOLAR 2024-2025 (9).xls PMMM.xls',
+                        objective: 'El archivo matriz en Excel que contiene las listas completas por cada brigada específica.',
+                        freq: 'Actualización en caso de renuncias o cambios',
+                        resp: 'Docente Encargado',
+                        critical: ['Conservar data de respaldo por cada estudiante o padre brigadista.'],
+                        alert: 'slate'
                     },
                     {
-                        code: '2.5', icon: 'ph-fill ph-star',
-                        title: 'Evaluación del Desempeño (ODI)',
-                        file: 'evaluacion_desempeno.pdf',
-                        objective: 'Instrumento para evaluar Objetivos de Desempeño Individual (ODI) y competencias del personal docente, administrativo y obrero. Utilizado para los procesos de ascenso y estabilidad laboral del MPPE.',
-                        freq: 'Semestral o anual',
+                        code: 'ORG.5', icon: 'ph-fill ph-user-gear',
+                        title: 'Asignación de Funciones a Personal',
+                        file: '2_Organizacion/asignación de funciones yusbely 2024.docx',
+                        objective: 'Garantiza por escrito que cada trabajador reciba oficialmente la carga horaria, roles técnicos y administrativos asignados para el periodo.',
+                        freq: 'Cada año o por cambio administrativo',
                         resp: 'Dirección del Plantel',
-                        critical: ['Evaluación del evaluador a evaluado con firma de aceptación.', 'Objetivos pre-acordados por escrito.', 'Copia firmada archivada en el expediente del personal.'],
+                        critical: ['Bases legales en LOE.', 'Firma de conforme del docente (Acuse de recibo).'],
+                        alert: 'amber'
+                    }
+                ]
+            },
+            dim3: {
+                title: 'Fase de Dirección',
+                subtitle: 'Ingreso e interacciones · PMMM',
+                icon: 'ph-fill ph-compass',
+                color: 'bg-indigo-600',
+                activeClass: 'active-dim3',
+                btnColor: 'bg-indigo-600 hover:bg-indigo-700',
+                badgeColor: 'bg-indigo-100 text-indigo-800',
+                docs: [
+                    {
+                        code: 'DIR.1', icon: 'ph-fill ph-identification-card',
+                        title: 'Ficha de Inscripción',
+                        file: '3_Direccion/Ficha_inscripcion.pdf',
+                        objective: 'Documento fundamental que registra el ingreso de estudiantes, historial clínico primario y legalidad del núcleo familiar.',
+                        freq: 'Al momento de inscripción',
+                        resp: 'Directiva y Control Estud.',
+                        critical: ['Verificación estricta de vacunas y alergias.', 'Cédulas y números de contacto (emergencias).'],
+                        alert: 'red'
+                    },
+                    {
+                        code: 'DIR.2', icon: 'ph-fill ph-hand-heart',
+                        title: 'Acta de Compromiso del Representante',
+                        file: '3_Direccion/Acta_compromiso.pdf',
+                        objective: 'Documento de co-responsabilidad donde el padre o madre se supedita a los reglamentos y horarios de LOPNNA.',
+                        freq: 'Por cada estudiante formalizado',
+                        resp: 'Docente / Dirección',
+                        critical: ['Firma y C.I legible.', 'Archivado indefectiblemente en expediente del estudiante.'],
                         alert: 'amber'
                     },
                     {
-                        code: '2.6', icon: 'ph-fill ph-warning',
-                        title: 'Acta de Amonestación Escrita',
-                        file: 'Acta_amonestacion.pdf',
-                        objective: 'Procedimiento disciplinario formal aplicado al personal, según la Ley del Estatuto de la Función Pública. Documenta la falta, la norma vulnerada y la sanción correspondiente.',
-                        freq: 'Cuando se amerite',
-                        resp: 'Dirección del Plantel',
-                        critical: ['<b>NO debe presentar tachaduras ni enmendaduras.</b>', 'Descripción precisa de la falta y la norma legal infringida.', 'Firma del funcionario amonestado o constancia de negativa.'],
+                        code: 'DIR.3', icon: 'ph-fill ph-envelope-open',
+                        title: 'Carta de Aceptación',
+                        file: '3_Direccion/carta_aceptacion.pdf',
+                        objective: 'Constancia oficial que avala ante el Estado y el solicitante el cupo escolar asegurado.',
+                        freq: 'Bajo solicitud de representantes nuevos',
+                        resp: 'Dirección',
+                        critical: ['Sello húmedo y fecha de apertura de periodo.'],
+                        alert: 'slate'
+                    }
+                ]
+            },
+            dim4: {
+                title: 'Fase de Control',
+                subtitle: 'Registros, estadísticas e insumos diarios',
+                icon: 'ph-fill ph-faders',
+                color: 'bg-amber-600',
+                activeClass: 'active-dim4',
+                btnColor: 'bg-amber-600 hover:bg-amber-700',
+                badgeColor: 'bg-amber-100 text-amber-800',
+                docs: [
+                    {
+                        code: 'CON.1', icon: 'ph-fill ph-calendar-check',
+                        title: 'Control Diario de Asistencia Estudiantil',
+                        file: '4_Control/control_asistencia.pdf',
+                        objective: 'Llevar estadísticas físicas del cumplimiento del acto escolar por parte de los niños, clave para resguardo y PAE.',
+                        freq: 'Diario',
+                        resp: 'Docente de Aula',
+                        critical: ['Totalización a final de mes sin alteraciones.', 'Inasistencias largas requieren contacto con el hogar.'],
+                        alert: 'amber'
+                    },
+                    {
+                        code: 'CON.2', icon: 'ph-fill ph-clock',
+                        title: 'Registro de Asistencia de Personal',
+                        file: '4_Control/constancia_asistencia.pdf',
+                        objective: 'Monitoreo de horas hábiles trabajadas por turnos para personal directivo, docente, administrativo y obrero.',
+                        freq: 'Diario / Turno',
+                        resp: 'Subdirección Administrativa',
+                        critical: ['Firmas diarias obligatorias.', 'Base para el reporte de incidencias laborales ante la Zona.'],
+                        alert: 'red'
+                    },
+                    {
+                        code: 'CON.3', icon: 'ph-fill ph-microsoft-excel-logo',
+                        title: 'Consolidados de Matrícula Inicial (Data en Bruto)',
+                        file: '4_Control/Matricula inicial SECCION B 25-26.xlsx',
+                        objective: 'Bases de datos en Excel (Secciones A - F) que compilan fecha de nacimiento, sexo, edad computable para el Mineduc.',
+                        freq: 'Inicio Octubre y Enero',
+                        resp: 'Control de Estudios',
+                        critical: ['Cálculo preciso de edad al momento del ingreso.', 'Insumo numérico fundamental para el SINCE.'],
+                        alert: 'amber'
+                    },
+                    {
+                        code: 'CON.4', icon: 'ph-fill ph-chart-polar',
+                        title: 'Formato de Resumen Final de Año Escolar',
+                        file: '4_Control/FORMATO DE RESUMEN FINAL.doc',
+                        objective: 'Estadística global de cierre. Balance de género, abandonos y promociones a primer grado.',
+                        freq: 'Fin del Año Escolar (Julio)',
+                        resp: 'Directora',
+                        critical: ['Debe cuadrar con la data inicial menos los retiros comprobados.', 'Firma y sello rectoral para entrega en Circuito 06.'],
                         alert: 'red'
                     }
                 ]
             },
-            naranja: {
-                title: 'Dimensión Comunitaria y Familiar',
-                subtitle: 'Integración Escuela-Comunidad · PMMM',
-                icon: 'ph-fill ph-house-line',
+            dim5: {
+                title: 'Fase de Ejecución',
+                subtitle: 'Resultados y Constancias para el usuario',
+                icon: 'ph-fill ph-paper-plane-tilt',
                 color: 'bg-orange-600',
-                activeClass: 'active-naranja',
+                activeClass: 'active-dim5',
                 btnColor: 'bg-orange-600 hover:bg-orange-700',
                 badgeColor: 'bg-orange-100 text-orange-800',
                 docs: [
                     {
-                        code: '3.1', icon: 'ph-fill ph-users-four',
-                        title: 'Acta Constitutiva del Consejo Educativo',
-                        file: 'CONSEJO EDUCATIVO 2025-2026.docx',
-                        objective: 'Documenta formalmente la elección y conformación de los comités del Consejo Educativo (Académico, Infraestructura, Salud, Cultura, Convivencia, Contraloría Social, etc.), según la Resolución N° 058 del MPPE. Matrícula 2025-2026: 91 estudiantes, 118 voceros.',
-                        freq: 'Anual (a los 15 días de inicio del año escolar)',
-                        resp: 'Asamblea General / Dirección',
-                        critical: ['El acta <b>NO</b> puede presentar tachaduras ni enmendaduras.', 'Todas las hojas deben llevar el sello de la institución.', 'Debe registrarse en la taquilla única en no más de 45 días continuos.', 'Anexar listado de asistencia con C.I. verificadas.'],
-                        alert: 'red'
-                    },
-                    {
-                        code: '3.2', icon: 'ph-fill ph-megaphone',
-                        title: 'Acta de Elección de la Vocería del MBFAI',
-                        file: 'Actas de eleccion de MBFAI (intitucional) (1).2025-2026.docx',
-                        objective: 'Documento de elección de la Vocería Institucional del Movimiento Bolivariano de Familias Aristóbulo Istúriz (MBFAI), que integra a las familias como actores de la gestión escolar.',
-                        freq: 'Anual (inicio de año escolar)',
-                        resp: 'Familias y Comunidad / Dirección',
-                        critical: ['Proceso de elección democrático y documentado.', 'Lista de asistencia de los representantes participantes.', 'Nombre y cédula de los voceros electos.'],
-                        alert: 'amber'
-                    },
-                    {
-                        code: '3.3', icon: 'ph-fill ph-notebook',
-                        title: 'Acta de Asamblea (Madres, Padres y Representantes)',
-                        file: 'acta.asamblea.padres.pdf',
-                        objective: 'Libro de actas para registrar formalmente los puntos tratados y los acuerdos tomados en las asambleas ordinarias y extraordinarias de representantes, con respaldo legal ante la Zona Educativa.',
-                        freq: 'Trimestral (mínimo 3 al año)',
-                        resp: 'Dirección / Comité de Economía Escolar',
-                        critical: ['Puntos del orden del día claramente enumerados.', 'Quórum verificado con lista de asistencia.', 'Acuerdos y compromisos firmados por los presentes.'],
-                        alert: 'amber'
-                    },
-                    {
-                        code: '3.4', icon: 'ph-fill ph-seal-check',
-                        title: 'Constancia de Asistencia (Para Representantes)',
-                        file: 'constancia_asistencia.pdf',
-                        objective: 'Justificativo formal emitido por la institución para que el representante pueda presentarlo ante su empleador, demostrando su asistencia a reuniones, citaciones o actividades convocadas por el plantel.',
-                        freq: 'A solicitud, por cada reunión o citación',
-                        resp: 'Secretaría / Dirección',
-                        critical: ['Especificar el motivo de la citación o reunión.', 'Hora de inicio y finalización del evento.', 'Sello y firma de la Directora Encargada.'],
+                        code: 'EJC.1', icon: 'ph-fill ph-certificate',
+                        title: 'Constancia de Estudio',
+                        file: '5_Ejecucion/Constancia_estudio.pdf',
+                        objective: 'Prueba de legalidad y pertenencia del párvulo al plantel; ejecutada para uso externo por las familias.',
+                        freq: 'A solicitud del representante',
+                        resp: 'Secretaría, validada por Dirección',
+                        critical: ['Datos exactos de grado, sección y turno.', 'Sello de la institución y firma oficial. NO es válida de otra forma.'],
                         alert: 'slate'
                     }
                 ]
             },
-            gris: {
-                title: 'Dimensión Operativa y de Infraestructura',
-                subtitle: 'Recursos y Seguridad · PMMM',
-                icon: 'ph-fill ph-shield-check',
-                color: 'bg-slate-700',
-                activeClass: 'active-gris',
-                btnColor: 'bg-slate-700 hover:bg-slate-800',
-                badgeColor: 'bg-slate-200 text-slate-800',
+            dim6: {
+                title: 'Fase de Supervisión',
+                subtitle: 'Vigilancia y Auditoría del proceso',
+                icon: 'ph-fill ph-eye',
+                color: 'bg-red-600',
+                activeClass: 'active-dim6',
+                btnColor: 'bg-red-600 hover:bg-red-700',
+                badgeColor: 'bg-red-100 text-red-800',
                 docs: [
                     {
-                        code: '4.1', icon: 'ph-fill ph-handshake',
-                        title: 'Acta de Actualización de Acuerdos de Convivencia',
-                        file: '2025- 2026 ACTA ACTUALIZACION DE LOS ACUERDOS DE CONV. ESC..doc',
-                        objective: 'Normas de convivencia escolar y comunitaria actualizadas y adecuadas al contexto 2025-2026, con énfasis en la prevención del acoso escolar (LOPNNA Art. 91) y estrategias de buen trato emanadas de la Circular 0003 de la Zona Educativa N° 14.',
-                        freq: 'Anual (inicio de año escolar)',
-                        resp: 'Comunidad Educativa / Dirección',
-                        critical: ['Incluir estrategias de buen trato y anti-acoso.', 'Debe ser firmada por: Directora, MBF, Defensor Educativo, OBE y Comités de Convivencia.', 'Vigencia establecida por el año escolar en curso.'],
-                        alert: 'red'
-                    },
-                    {
-                        code: '4.2', icon: 'ph-fill ph-shield-plus',
-                        title: 'Estructura de Brigadas Escolares de Prevención',
-                        file: 'BRIGADAS AÑO ESCOLAR 2024-2025 (9).xls PMMM.xls',
-                        objective: 'Organización formal de las brigadas escolares de prevención integral, con la designación de responsables para cada brigada. Documento base para el reporte al Circuito 06.',
-                        freq: 'Anual (se reporta al circuito)',
-                        resp: 'Docente Encargado de Brigadas',
-                        critical: ['Cada brigada debe integrar: Director/a, Docente, Administrativo, Obrero, Consejo Educativo y MBFAI.', 'La estructura debe incluir los nombres y cédulas de los integrantes.', 'Firmado y sellado por la Dirección.'],
+                        code: 'SUP.1', icon: 'ph-fill ph-notebook',
+                        title: 'Acta de Asamblea de Padres, Madres...',
+                        file: '6_Supervision/acta.asamblea.padres.pdf',
+                        objective: 'Documentación rigurosa de reuniones colectivas para asentar acuerdos, presupuestos, decisiones y problemas.',
+                        freq: 'Al menos 3 por año o en crisis',
+                        resp: 'Consejo Comunitario/Directora',
+                        critical: ['Quórum de la mitad más uno.', 'Firmas que prueben la aprobación de la mayoría.'],
                         alert: 'amber'
                     },
                     {
-                        code: '4.3', icon: 'ph-fill ph-users-three',
-                        title: 'Listados de Integrantes por Brigada',
-                        file: 'BRIGADAS AÑO ESCOLAR 2024-2025 (9).xls PMMM.xls',
-                        objective: 'Listados nominales de cada brigada específica: Lectura, Ciencia y Tecnología, Deporte, Salud, Bicentenaria, Culturales (Teatro, Corazón Llanero, Corazón Salsero) y Bricomiles (Educativas Militares Comunitarias).',
-                        freq: 'Anual (inicio de año escolar)',
-                        resp: 'Docente/a Encargado/a por Brigada',
-                        critical: ['Una planilla separada o pestaña por brigada en el libro Excel.', 'Datos mínimos: Nombre, C.I., Cargo/Rol, Turno.', 'Las Brigadas Bricomiles requieren coordinación con el Consejo Comunal.'],
-                        alert: 'slate',
-                        extras: ['Brigada de Lectura', 'Brigada de Ciencia y Tecnología', 'Brigada de Deporte', 'Brigada de Salud', 'Brigada Bicentenaria', 'Brigada Cultural: Teatro', 'Brigada Cultural: Corazón Llanero', 'Brigada Cultural: Corazón Salsero', 'Brigadas Bricomiles (Comunitarias)']
+                        code: 'SUP.2', icon: 'ph-fill ph-warning',
+                        title: 'Acta de Amonestación Escrita',
+                        file: '6_Supervision/Acta_amonestacion.pdf',
+                        objective: 'Herramienta disciplinaria sobre personal adscrito bajo causales de Ley de Función Pública.',
+                        freq: 'A nivel de conflicto comprobado',
+                        resp: 'Directora Encargada',
+                        critical: ['Debe tipificar exactamente el artículo vulnerado.', 'Requiere firma del aludido o testigos si este se niega.', 'Proceso legalmente delicado.'],
+                        alert: 'red'
+                    }
+                ]
+            },
+            dim7: {
+                title: 'Fase de Evaluación',
+                subtitle: 'Valoración del rendimiento y resultados',
+                icon: 'ph-fill ph-chart-line-up',
+                color: 'bg-violet-600',
+                activeClass: 'active-dim7',
+                btnColor: 'bg-violet-600 hover:bg-violet-700',
+                badgeColor: 'bg-violet-100 text-violet-800',
+                docs: [
+                    {
+                        code: 'EVA.1', icon: 'ph-fill ph-star',
+                        title: 'Evaluación del Desempeño Escolar / Funcionario (ODI)',
+                        file: '7_Evaluacion/evaluacion_desempeno.pdf',
+                        objective: 'Métrica formal de las competencias, logros y áreas a mejorar de cada miembro del personal educativo.',
+                        freq: 'Anualmente o previo a promociones',
+                        resp: 'Dirección (Evaluador)',
+                        critical: ['Se realiza de mutuo acuerdo bajo el formato ODI.', 'Debe resguardarse para auditoría de RRHH del Ministerio.'],
+                        alert: 'amber'
                     }
                 ]
             }
@@ -553,9 +687,9 @@
             if (doc.extras) {
                 extrasHTML = `
             <div class="mt-4">
-                <h5 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-1.5"><i class="ph-fill ph-list text-slate-400 text-lg"></i> Brigadas Identificadas</h5>
+                <h5 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-1.5"><i class="ph-fill ph-list text-slate-400 text-lg"></i> Detalles Anexos</h5>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    ${doc.extras.map(e => `<div class="bg-white rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-700 flex items-center gap-2"><i class="ph-fill ph-shield-checkered text-slate-400"></i>${e}</div>`).join('')}
+                    ${doc.extras.map(e => `<div class="bg-white rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-700 flex items-center gap-2"><i class="ph-fill ph-check-circle text-slate-400"></i>${e}</div>`).join('')}
                 </div>
             </div>`;
             }
@@ -575,7 +709,7 @@
             <div class="space-y-5">
                 <div>
                     <h5 class="text-sm font-bold text-slate-900 flex items-center gap-1.5 mb-1">
-                        <i class="ph-fill ph-target text-slate-400 text-lg"></i> Objetivo del Documento
+                        <i class="ph-fill ph-target text-slate-400 text-lg"></i> Descripción y Objetivo
                     </h5>
                     <p class="text-sm text-slate-600 leading-relaxed">${doc.objective}</p>
                 </div>
@@ -600,8 +734,8 @@
                 <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center gap-3">
                     <i class="ph-fill ph-file text-slate-400 text-2xl shrink-0"></i>
                     <div class="min-w-0">
-                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Archivo en el Portafolio</p>
-                        <p class="text-sm font-mono text-slate-600 truncate">${doc.file}</p>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Ruta del Archivo Físico</p>
+                        <p class="text-[11px] font-mono text-slate-500 truncate mt-0.5">${doc.file}</p>
                     </div>
                     <button onclick="openFile('${doc.file.replace(/'/g, "\\'")}')" class="ml-auto shrink-0 text-slate-500 hover:text-slate-900 transition p-1.5 rounded-lg hover:bg-slate-200" title="Abrir archivo">
                         <i class="ph ph-arrow-square-out text-xl"></i>
@@ -613,9 +747,8 @@
         }
 
         function openFile(filename) {
-            // Since both index.html and the files are in the same folder,
-            // we can open files relatively. Use window.open with the filename.
-            window.open(encodeURIComponent(filename), '_blank');
+            // Since both index.html and the folders are here, open directly
+            window.open(encodeURIComponent(filename).replace(/%2F/g, '/'), '_blank');
         }
 
         // Close on overlay click
